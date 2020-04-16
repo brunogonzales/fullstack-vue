@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
   const posts = await loadPostsCollection()
   await posts.insertOne({
     text: req.body.text,
-    createdAd: new Date(),
+    createdAt: new Date(),
   })
 
   res.status(201).send()
